@@ -1,4 +1,5 @@
 ﻿using System;
+using Cortex;
 
 namespace Prototype1
 {
@@ -7,6 +8,7 @@ namespace Prototype1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            var n = new Neuron();
             Console.ReadKey();
         }
     }
