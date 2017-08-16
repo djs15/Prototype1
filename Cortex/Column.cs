@@ -24,5 +24,20 @@ namespace Cortex
         {
             Id = new Id(layer, index);
         }
+
+        public void SetExperience(Experience experience)
+        {
+            Experience = experience;
+        }
+
+        public void SetPrediction(Prediction prediction)
+        {
+            Prediction = prediction;
+        }
+
+        public void Trigger(double strength)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -7,7 +7,8 @@ namespace Prototype1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var n = new NeoCortex();
+            Console.ReadKey();
         }
     }
 }
