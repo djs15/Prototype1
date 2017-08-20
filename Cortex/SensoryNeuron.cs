@@ -7,20 +7,24 @@ namespace Cortex
 {
     public class SensoryNeuron: IInput
     {
-        private Timer _timer;
-        private AutoResetEvent _autoReset;
+        //private Timer _timer;
+        //private AutoResetEvent _autoReset;
 
 		public Id Id { get; private set; }
 		public double Strength { get; private set; }
+		public Pattern Pattern { get; private set; }
+        public event EventHandler<double> OnTrigger;
 
 		public SensoryNeuron(long index)
         {
             Id = new Id(0, index);
         }
 
+
         public void Trigger(double strength)
         {
             Strength = strength;
+            OnTrigger?.Invoke(this, strength);
 
             /*if (_timer == null)
             {

@@ -7,6 +7,8 @@ namespace Cortex.Interfaces
     {
         Id Id { get; }
         double Strength { get; }
-        void Trigger(double strength);
+        Pattern Pattern { get; }
+		void Trigger(double strength);
+        event EventHandler<double> OnTrigger;
     }
 }
